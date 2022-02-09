@@ -16,8 +16,8 @@ class Usuario:
     def transferir_dinero(self,amount,user):
         self.amount -= amount
         user.amount += amount
-        self.display_user_balance()
-        user.display_user_balance()
+        self.mostrar_balance_usuario()
+        user.mostrar_balance_usuario()
 
 maria = Usuario("Maria")
 sofia = Usuario("Sofia")
@@ -31,14 +31,14 @@ maria.mostrar_balance_usuario()
 
 sofia.hacer_deposito(980)
 sofia.hacer_deposito(900)
-sofia.hacer_retiro(3000)
-sofia.hacer_retiro(500)
+sofia.hacer_retiro(300)
+sofia.hacer_retiro(200)
 sofia.mostrar_balance_usuario()
 
 naomi.hacer_deposito(2000)
 naomi.hacer_retiro(800)
-naomi.hacer_retiro(4000)
-naomi.hacer_retiro(6000)
+naomi.hacer_retiro(200)
+naomi.hacer_retiro(60)
 naomi.mostrar_balance_usuario()
 
-sofia.transferir_dinero(400, naomi)
+sofia.transferir_dinero(40, naomi)
